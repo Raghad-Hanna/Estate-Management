@@ -1,0 +1,5 @@
+{"resourceType":"Estate","resourceID":8,"operationType":"CREATE","operationDate":"Dec 16, 2021 2:16:50 AM","operator":"raghad_hanna"}
+{"resourceType":"SaleTransaction","resourceID":4,"operationType":"CREATE","operationDate":"Dec 16, 2021 2:18:14 AM","operator":"raghad_hanna"}
+{"resourceType":"Estate","resourceID":8,"operationType":"UPDATE","operationDate":"Dec 16, 2021 2:41:32 AM","operator":"admin"}
+{"resourceType":"Estate","resourceID":9,"operationType":"CREATE","operationDate":"Dec 16, 2021 2:42:16 AM","operator":"admin"}
+{"resourceType":"Estate","resourceID":9,"operationType":"DELETE","operationDate":"Dec 16, 2021 2:42:35 AM","operator":"admin"}
