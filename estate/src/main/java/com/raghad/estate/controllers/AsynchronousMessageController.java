@@ -11,11 +11,14 @@ import com.raghad.estate.asynchronous_messaging.RabbitMQConfiguration;
 
 @RestController
 public class AsynchronousMessageController {
-
-    @Autowired
     RabbitTemplate template;
 
-    @PostMapping("api/publish")
+    @Autowired
+    public AsynchronousMessageController(RabbitTemplate template) {
+        this.template = template;
+    }
+
+    @PostMapping("api/messages")
     public Message publishMessage(@RequestBody Message message) {
         template.convertAndSend(RabbitMQConfiguration.EXCHANGE_NAME,
                 RabbitMQConfiguration.ROUTING_KEY, message);

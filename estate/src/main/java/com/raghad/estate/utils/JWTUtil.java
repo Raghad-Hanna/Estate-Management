@@ -4,14 +4,18 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.keygen.KeyGenerators;
+import org.springframework.security.crypto.keygen.StringKeyGenerator;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+@Component
 public class JWTUtil {
-    private String SECRET_KEY = "secret";
+    private final String SECRET_KEY = KeyGenerators.string().generateKey();
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);

@@ -1,8 +1,8 @@
 package com.raghad.estate.controllers;
 
-//import com.raghad.estate.forms.RegistrationForm;
 import com.raghad.estate.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -21,9 +21,10 @@ public class SignupController {
     }
 
     @PostMapping
-    public String createUser(@RequestBody User user) {
+    @ResponseStatus(code = HttpStatus.CREATED)
+    public User createUser(@RequestBody User user) {
         user.setPassword(this.passwordEncoder.encode(user.getPassword()));
         this.userRepository.save(user);
-        return "Created The User Successfully";
+        return user;
     }
 }

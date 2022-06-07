@@ -2,6 +2,7 @@ package com.raghad.estate.controllers;
 
 import java.util.List;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -18,6 +19,7 @@ public class EstateController {
     }
 
     @PostMapping("api/estates")
+    @ResponseStatus(code = HttpStatus.CREATED)
     public Estate createEstate(@RequestBody Estate estate) {
         return this.estateService.saveForSaleEstate(estate);
     }
@@ -38,7 +40,8 @@ public class EstateController {
     }
 
     @DeleteMapping("api/estates/{ID}")
-    public Long deleteEstate(@PathVariable long ID) {
-        return this.estateService.deleteById(ID);
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    public void deleteEstate(@PathVariable long ID) {
+        this.estateService.deleteById(ID);
     }
 }

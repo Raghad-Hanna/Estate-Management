@@ -3,3 +3,4 @@
 {"resourceType":"Estate","resourceID":8,"operationType":"UPDATE","operationDate":"Dec 16, 2021 2:41:32 AM","operator":"admin"}
 {"resourceType":"Estate","resourceID":9,"operationType":"CREATE","operationDate":"Dec 16, 2021 2:42:16 AM","operator":"admin"}
 {"resourceType":"Estate","resourceID":9,"operationType":"DELETE","operationDate":"Dec 16, 2021 2:42:35 AM","operator":"admin"}
+{"resourceType":"Estate","resourceID":10,"operationType":"DELETE","operationDate":"Mar 20, 2022 10:17:45 PM","operator":"anonymousUser"}

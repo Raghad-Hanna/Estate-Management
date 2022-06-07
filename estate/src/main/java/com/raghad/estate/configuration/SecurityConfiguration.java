@@ -39,7 +39,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/publish",
                         "api/default-values",
                         "api/resource-crud-operations-details").hasRole("ADMIN")
-                .antMatchers("/estates/**",
+                .antMatchers("/estates/*",
                         "api/for-sale-estates",
                         "api/sold-estates",
                         "api/sale-transactions/*").hasAnyRole("USER", "ADMIN")
