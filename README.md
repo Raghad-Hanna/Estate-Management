@@ -1,11 +1,11 @@
-#Estate Management Web Service
-##Core Idea
+# Estate Management Web Service
+## Core Idea
 This project Provides an API for the owners of estates registered in the system where they can store
 and sell those estates
 
 It also provides an API for the system administrator where one can do administrative tasks
 
-##Used Technologies
+## Used Technologies
 * Spring Boot
 * Spring MVC
 * Spring Data JPA
@@ -13,7 +13,7 @@ It also provides an API for the system administrator where one can do administra
 * Spring Security
 * NGINX Web Server
 
-##Main Features
+## Main Features
 1. Authentication & Authorization using JWT Tokens standard
 2. Estate owner registration in the system using an email and a password
 2. Estates CRUD API for the owners to manage their estates
